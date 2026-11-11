@@ -31,14 +31,6 @@ const news = [
   },
 ]
 
-const quickLinks = [
-  { name: 'AIMS', url: 'https://aims.marsu-cics.com' },
-  { name: 'Edocs', url: 'https://edocs.marsu-cics.com' },
-  { name: 'ESIMS', url: 'https://esims.marsu-cics.com' },
-  { name: 'PMS', url: 'https://pms.marsu-cics.com' },
-  { name: 'REMMS', url: 'https://remms.marsu-cics.com' },
-]
-
 const stats = [
   { value: '500+', label: 'Enrolled Students' },
   { value: '25+', label: 'Faculty Members' },
@@ -189,9 +181,7 @@ function App() {
             ))}
           </div>
           <p className="note">
-            For details, visit the{' '}
-            <a href="https://esims.marsu-cics.com">ESIMS portal</a> or contact
-            the registrar's office.
+            For details, contact the registrar's office.
           </p>
         </div>
       </section>
@@ -209,23 +199,6 @@ function App() {
                 <time>{n.date}</time>
                 <h3>{n.title}</h3>
               </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section" id="apps">
-        <div className="container container-narrow">
-          <div className="section-head">
-            <p className="eyebrow">Campus Systems</p>
-            <h2>Student &amp; Faculty Portals</h2>
-          </div>
-          <div className="apps-row">
-            {quickLinks.map((a) => (
-              <a key={a.url} className="app-link" href={a.url}>
-                {a.name}
-                <span aria-hidden="true">→</span>
-              </a>
             ))}
           </div>
         </div>

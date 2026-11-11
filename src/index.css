@@ -1,7 +1,2 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap');
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'DM Sans',sans-serif}a{color:inherit}button,a{-webkit-tap-highlight-color:transparent}a:focus-visible{outline:3px solid #406d16;outline-offset:4px}::selection{background:#b9e968;color:#17341c}

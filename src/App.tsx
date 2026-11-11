@@ -1,240 +1,34 @@
 import './App.css'
 
-const programs = [
-  {
-    code: 'BSIS',
-    name: 'BS Information Systems',
-    desc: 'Business processes, enterprise systems, databases, and data management.',
-  },
-]
-
-const news = [
-  {
-    date: 'Nov 10, 2026',
-    title: 'CICS students place in regional programming competition',
-    tag: 'Achievement',
-  },
-  {
-    date: 'Nov 5, 2026',
-    title: 'New computer laboratory opens at Santa Cruz Campus',
-    tag: 'Campus',
-  },
-  {
-    date: 'Oct 28, 2026',
-    title: 'Open enrollment for SY 2026–2027 now available',
-    tag: 'Admissions',
-  },
-  {
-    date: 'Oct 15, 2026',
-    title: 'Guest lecture: AI in industry by industry practitioners',
-    tag: 'Academics',
-  },
-]
-
-const stats = [
-  { value: '500+', label: 'Enrolled Students' },
-  { value: '25+', label: 'Faculty Members' },
-  { value: '1', label: 'Degree Program' },
-  { value: '10+', label: 'Years of Service' },
-]
-
-const steps = [
-  {
-    title: 'Submit an application',
-    desc: 'Fill out the online application form or visit the admissions office.',
-  },
-  {
-    title: 'Submit requirements',
-    desc: 'Birth certificate, report card / transcript, and two 2×2 ID photos.',
-  },
-  {
-    title: 'Entrance assessment',
-    desc: 'A scheduling notice will be sent to your registered email and phone.',
-  },
-  {
-    title: 'Complete enrollment',
-    desc: 'Once accepted, settle the downpayment and claim your schedule.',
-  },
-]
+const university = 'https://marsu.edu.ph/school-of-information-and-computing-sciences/'
+const logo = 'https://www.marsu.edu.ph/assets/logo-CFyGvArd.png'
 
 function App() {
   return (
-    <div className="site">
-      <header className="nav">
-        <div className="nav-inner">
-          <a href="#top" className="brand">
-            <span className="brand-mark">CICS</span>
-            <span className="brand-name">Santa Cruz Campus</span>
-          </a>
-          <nav className="nav-links">
-            <a href="#about">About</a>
-            <a href="#programs">Programs</a>
-            <a href="#admissions">Admissions</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-          </nav>
+    <div className="site" id="top">
+      <div className="topbar"><div className="wrap topbar-inner"><span>MARINDUQUE STATE UNIVERSITY</span><span>Santa Cruz, Marinduque &nbsp; / &nbsp; Philippines</span></div></div>
+      <header className="header">
+        <div className="wrap nav">
+          <a href="#top" className="brand" aria-label="CICS Santa Cruz home"><img src={logo} alt="Marinduque State University seal" /><span><strong>CICS</strong><small>SANTA CRUZ CAMPUS</small></span></a>
+          <nav aria-label="Main navigation"><a href="#about">About</a><a href="#program">Academics</a><a href="#community">Our community</a><a href="#contact">Contact</a></nav>
+          <a className="nav-cta" href="https://marsu.edu.ph/" target="_blank" rel="noreferrer">Visit MarSU <span>↗</span></a>
         </div>
       </header>
-
-      <section className="hero" id="top">
-        <div className="container">
-          <p className="eyebrow">College of Information &amp; Computing Sciences</p>
-          <h1>Educating the digital workforce of tomorrow</h1>
-          <p className="hero-sub">
-            Quality education and hands-on training in information and
-            computing sciences at the Santa Cruz Campus.
-          </p>
-          <div className="hero-actions">
-            <a className="btn btn-primary" href="#admissions">
-              Apply Now
-            </a>
-            <a className="btn btn-outline" href="#programs">
-              View Programs
-            </a>
+      <main>
+        <section className="hero">
+          <div className="wrap hero-grid">
+            <div className="hero-copy"><div className="kicker"><span className="dot" /> MARINDUQUE STATE UNIVERSITY <span className="slash">/</span> SANTA CRUZ</div><h1>Ideas grow<br /> <em>here.</em></h1><p className="hero-lead">A place for curious minds and future makers.</p><p className="hero-description">Discover the College of Information and Computing Sciences at MarSU Santa Cruz Campus.</p><div className="hero-actions"><a className="button dark" href="#program">Explore the program <span>↗</span></a><a className="text-link" href="#about">Get to know CICS <span>↓</span></a></div></div>
+            <div className="hero-art" aria-label="CICS Santa Cruz graphic"><div className="art-top"><span>THE FUTURE IS<br />WHAT WE MAKE.</span><span>01 / 03</span></div><div className="art-orbit orbit-one" /><div className="art-orbit orbit-two" /><div className="art-center"><span>LEARN</span><strong>CREATE<br />CONNECT<span>.</span></strong><small>INFORMATION &amp; COMPUTING SCIENCES</small></div><div className="art-bottom"><span>ROOTED IN MARINDUQUE</span><span>✳</span><span>OPEN TO THE WORLD</span></div></div>
           </div>
-        </div>
-      </section>
-
-      <section className="stats">
-        <div className="container stats-grid">
-          {stats.map((s) => (
-            <div key={s.label} className="stat">
-              <strong>{s.value}</strong>
-              <span>{s.label}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="section" id="about">
-        <div className="container">
-          <div className="section-head">
-            <p className="eyebrow">About</p>
-            <h2>Our College</h2>
-          </div>
-          <div className="about-grid">
-            <div>
-              <h3>History</h3>
-              <p>
-                Founded to serve the growing demand for computing professionals
-                in the region, the College of Information and Computing
-                Sciences has grown into a center of excellence for IT
-                education. Our Santa Cruz Campus continues this legacy with
-                modern facilities and industry-aligned curricula.
-              </p>
-            </div>
-            <div>
-              <h3>Mission &amp; Vision</h3>
-              <p>
-                <strong>Mission:</strong> To provide accessible, quality
-                education in information and computing sciences that produces
-                competent and ethical professionals.
-              </p>
-              <p>
-                <strong>Vision:</strong> To be a leading college of computing
-                sciences recognized for innovation, service, and student
-                success.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section section-alt" id="programs">
-        <div className="container">
-          <div className="section-head">
-            <p className="eyebrow">Academics</p>
-            <h2>Programs Offered</h2>
-            <p className="section-sub">
-              Our flagship degree program at the Santa Cruz Campus.
-            </p>
-          </div>
-          <div className="program-list">
-            {programs.map((p) => (
-              <div key={p.code} className="program-row">
-                <span className="program-code">{p.code}</span>
-                <div>
-                  <h3>{p.name}</h3>
-                  <p>{p.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section" id="admissions">
-        <div className="container container-narrow">
-          <div className="section-head">
-            <p className="eyebrow">Admissions</p>
-            <h2>How to Enroll</h2>
-          </div>
-          <div className="steps">
-            {steps.map((s, i) => (
-              <div key={s.title} className="step">
-                <span className="step-num">{i + 1}</span>
-                <div>
-                  <h3>{s.title}</h3>
-                  <p>{s.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <p className="note">
-            For details, contact the registrar's office.
-          </p>
-        </div>
-      </section>
-
-      <section className="section section-alt" id="news">
-        <div className="container">
-          <div className="section-head">
-            <p className="eyebrow">Stay Updated</p>
-            <h2>News &amp; Events</h2>
-          </div>
-          <div className="news-list">
-            {news.map((n) => (
-              <article key={n.title} className="news-row">
-                <span className="news-tag">{n.tag}</span>
-                <time>{n.date}</time>
-                <h3>{n.title}</h3>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section cta" id="contact">
-        <div className="container container-narrow center">
-          <div className="section-head">
-            <p className="eyebrow">Contact</p>
-            <h2>Visit Us</h2>
-          </div>
-          <p>
-            College of Information and Computing Sciences
-            <br />
-            Santa Cruz Campus, MARSU
-          </p>
-          <p className="muted">
-            info@marsu-cics.com · Mon–Fri, 8:00 AM – 5:00 PM
-          </p>
-          <a className="btn btn-primary" href="mailto:info@marsu-cics.com">
-            Contact Us
-          </a>
-        </div>
-      </section>
-
-      <footer className="footer">
-        <div className="container footer-inner">
-          <span>
-            © {new Date().getFullYear()} College of Information and Computing
-            Sciences — Santa Cruz Campus
-          </span>
-          <span>marsu-cics.com</span>
-        </div>
-      </footer>
+          <div className="wrap hero-foot"><span>SCROLL TO EXPLORE &nbsp; ↓</span><span>LEARNING TODAY. BUILDING TOMORROW.</span></div>
+        </section>
+        <section className="intro section" id="about"><div className="wrap intro-grid"><div><p className="section-label"><span>01</span> ABOUT THE COLLEGE</p><h2>Technology with<br /><em>purpose.</em></h2></div><div className="intro-copy"><p className="big-copy">Good ideas can change communities. We’re here to help them grow.</p><p>The College of Information and Computing Sciences brings together education, research, and community engagement to help develop capable computing professionals and IT-enabled individuals.</p><p>Established in 1998, the college has grown alongside the needs of Marinduque and the digital world. At Santa Cruz, that story continues through the Bachelor of Science in Information Systems.</p><a className="inline-link" href={university} target="_blank" rel="noreferrer">More about CICS at MarSU <span>↗</span></a></div></div></section>
+        <section className="program section" id="program"><div className="wrap"><div className="program-head"><div><p className="section-label"><span>02</span> STUDY AT SANTA CRUZ</p><h2>Make your next<br /><em>move matter.</em></h2></div><p>Explore the intersection of people, information, and technology.</p></div><div className="program-card"><div className="program-index">01 <span>/</span> UNDERGRADUATE PROGRAM</div><div className="program-main"><div><span className="program-pill">BSIS</span><h3>Bachelor of Science in<br />Information Systems</h3><p>Learn to think about how information systems support organizations, solve problems, and connect people with technology.</p></div><div className="program-symbol" aria-hidden="true">✳</div></div><div className="program-bottom"><span>SANTA CRUZ CAMPUS</span><a href={university} target="_blank" rel="noreferrer">Explore CICS <span>↗</span></a></div></div></div></section>
+        <section className="community section" id="community"><div className="wrap community-grid"><div><p className="section-label"><span>03</span> BEYOND THE CLASSROOM</p><h2>Learn. Create.<br /><em>Give back.</em></h2><p className="community-lead">Education is only the beginning. CICS connects learning with research and service to the wider community.</p></div><div className="pillars"><div><span>01</span><div><h3>Education</h3><p>Build a foundation in information and computing sciences.</p></div><b>↗</b></div><div><span>02</span><div><h3>Research</h3><p>Ask meaningful questions and explore new ideas.</p></div><b>↗</b></div><div><span>03</span><div><h3>Extension</h3><p>Put knowledge to work in service of communities.</p></div><b>↗</b></div></div></div></section>
+        <section className="contact" id="contact"><div className="wrap contact-grid"><div><p className="section-label"><span>04</span> TAKE THE NEXT STEP</p><h2>Let’s build<br /><em>what’s next.</em></h2></div><div><p>Interested in studying with us? Get in touch with the college or visit the university website for current admissions information.</p><a className="button light" href="mailto:cicssc.bsis@gmail.com">Contact the college <span>↗</span></a><div className="contact-details"><div><small>EMAIL</small><a href="mailto:cicssc.bsis@gmail.com">cicssc.bsis@gmail.com</a></div><div><small>FACEBOOK</small><a href="https://www.facebook.com/CICSSantaCruz" target="_blank" rel="noreferrer">facebook.com/CICSSantaCruz ↗</a></div><div><small>FIND US</small><span>Santa Cruz Campus<br />Marinduque, Philippines</span></div></div></div></div></section>
+      </main>
+      <footer><div className="wrap footer-grid"><a href="#top" className="footer-brand"><img src={logo} alt="" /><span><strong>CICS</strong><small>SANTA CRUZ CAMPUS</small></span></a><p>College of Information and<br />Computing Sciences</p><div><a href="https://marsu.edu.ph/" target="_blank" rel="noreferrer">Marinduque State University ↗</a><a href="https://www.facebook.com/CICSSantaCruz" target="_blank" rel="noreferrer">Facebook ↗</a><small>© {new Date().getFullYear()} CICS Santa Cruz</small></div></div></footer>
     </div>
   )
 }
-
 export default App

@@ -2,34 +2,9 @@ import './App.css'
 
 const programs = [
   {
-    code: 'BSCS',
-    name: 'BS Computer Science',
-    desc: 'Software development, algorithms, databases, and systems design.',
-  },
-  {
-    code: 'BSIT',
-    name: 'BS Information Technology',
-    desc: 'IT infrastructure, networks, web systems, and technical support.',
-  },
-  {
     code: 'BSIS',
     name: 'BS Information Systems',
-    desc: 'Business processes, enterprise systems, and data management.',
-  },
-  {
-    code: 'DIT',
-    name: 'Diploma in IT',
-    desc: 'A two-year technical program focused on practical IT skills.',
-  },
-  {
-    code: 'ACT',
-    name: 'Associate in Computer Technology',
-    desc: 'Foundational computing skills for entry-level IT careers.',
-  },
-  {
-    code: 'CAP',
-    name: 'Computer Applications',
-    desc: 'Short courses in office productivity and digital literacy.',
+    desc: 'Business processes, enterprise systems, databases, and data management.',
   },
 ]
 
@@ -67,7 +42,7 @@ const quickLinks = [
 const stats = [
   { value: '500+', label: 'Enrolled Students' },
   { value: '25+', label: 'Faculty Members' },
-  { value: '6', label: 'Degree & Diploma Programs' },
+  { value: '1', label: 'Degree Program' },
   { value: '10+', label: 'Years of Service' },
 ]
 
@@ -179,8 +154,7 @@ function App() {
             <p className="eyebrow">Academics</p>
             <h2>Programs Offered</h2>
             <p className="section-sub">
-              From short courses to bachelor's degrees — choose the path that
-              fits your goals.
+              Our flagship degree program at the Santa Cruz Campus.
             </p>
           </div>
           <div className="program-list">

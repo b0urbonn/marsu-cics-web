@@ -3,22 +3,22 @@ import './App.css'
 const programs = [
   {
     code: 'BSCS',
-    name: 'Bachelor of Science in Computer Science',
+    name: 'BS Computer Science',
     desc: 'Software development, algorithms, databases, and systems design.',
   },
   {
     code: 'BSIT',
-    name: 'Bachelor of Science in Information Technology',
+    name: 'BS Information Technology',
     desc: 'IT infrastructure, networks, web systems, and technical support.',
   },
   {
     code: 'BSIS',
-    name: 'Bachelor of Science in Information Systems',
+    name: 'BS Information Systems',
     desc: 'Business processes, enterprise systems, and data management.',
   },
   {
     code: 'DIT',
-    name: 'Diploma in Information Technology',
+    name: 'Diploma in IT',
     desc: 'A two-year technical program focused on practical IT skills.',
   },
   {
@@ -28,7 +28,7 @@ const programs = [
   },
   {
     code: 'CAP',
-    name: 'Computer Applications Program',
+    name: 'Computer Applications',
     desc: 'Short courses in office productivity and digital literacy.',
   },
 ]
@@ -71,6 +71,25 @@ const stats = [
   { value: '10+', label: 'Years of Service' },
 ]
 
+const steps = [
+  {
+    title: 'Submit an application',
+    desc: 'Fill out the online application form or visit the admissions office.',
+  },
+  {
+    title: 'Submit requirements',
+    desc: 'Birth certificate, report card / transcript, and two 2×2 ID photos.',
+  },
+  {
+    title: 'Entrance assessment',
+    desc: 'A scheduling notice will be sent to your registered email and phone.',
+  },
+  {
+    title: 'Complete enrollment',
+    desc: 'Once accepted, settle the downpayment and claim your schedule.',
+  },
+]
+
 function App() {
   return (
     <div className="site">
@@ -78,10 +97,7 @@ function App() {
         <div className="nav-inner">
           <a href="#top" className="brand">
             <span className="brand-mark">CICS</span>
-            <span className="brand-text">
-              College of Information &amp; Computing Sciences
-              <small>Santa Cruz Campus</small>
-            </span>
+            <span className="brand-name">Santa Cruz Campus</span>
           </a>
           <nav className="nav-links">
             <a href="#about">About</a>
@@ -94,18 +110,18 @@ function App() {
       </header>
 
       <section className="hero" id="top">
-        <div className="hero-inner">
-          <p className="eyebrow">MARSU · Santa Cruz Campus</p>
-          <h1>College of Information<br />&amp; Computing Sciences</h1>
+        <div className="container">
+          <p className="eyebrow">College of Information &amp; Computing Sciences</p>
+          <h1>Educating the digital workforce of tomorrow</h1>
           <p className="hero-sub">
-            Shaping future technologists, developers, and information
-            professionals through quality education and hands-on training.
+            Quality education and hands-on training in information and
+            computing sciences at the Santa Cruz Campus.
           </p>
           <div className="hero-actions">
             <a className="btn btn-primary" href="#admissions">
               Apply Now
             </a>
-            <a className="btn btn-ghost" href="#programs">
+            <a className="btn btn-outline" href="#programs">
               View Programs
             </a>
           </div>
@@ -113,7 +129,7 @@ function App() {
       </section>
 
       <section className="stats">
-        <div className="stats-inner">
+        <div className="container stats-grid">
           {stats.map((s) => (
             <div key={s.label} className="stat">
               <strong>{s.value}</strong>
@@ -124,18 +140,20 @@ function App() {
       </section>
 
       <section className="section" id="about">
-        <div className="section-inner">
-          <p className="eyebrow">About Us</p>
-          <h2>Educating the digital workforce of tomorrow</h2>
+        <div className="container">
+          <div className="section-head">
+            <p className="eyebrow">About</p>
+            <h2>Our College</h2>
+          </div>
           <div className="about-grid">
             <div>
-              <h3>Our History</h3>
+              <h3>History</h3>
               <p>
                 Founded to serve the growing demand for computing professionals
                 in the region, the College of Information and Computing
-                Sciences has grown into a center of excellence for IT education.
-                Our Santa Cruz Campus continues this legacy with modern
-                facilities and industry-aligned curricula.
+                Sciences has grown into a center of excellence for IT
+                education. Our Santa Cruz Campus continues this legacy with
+                modern facilities and industry-aligned curricula.
               </p>
             </div>
             <div>
@@ -156,61 +174,63 @@ function App() {
       </section>
 
       <section className="section section-alt" id="programs">
-        <div className="section-inner">
-          <p className="eyebrow">Academics</p>
-          <h2>Programs Offered</h2>
-          <p className="section-sub">
-            Choose a path that matches your career goals — from short courses
-            to bachelor's degrees.
-          </p>
-          <div className="program-grid">
+        <div className="container">
+          <div className="section-head">
+            <p className="eyebrow">Academics</p>
+            <h2>Programs Offered</h2>
+            <p className="section-sub">
+              From short courses to bachelor's degrees — choose the path that
+              fits your goals.
+            </p>
+          </div>
+          <div className="program-list">
             {programs.map((p) => (
-              <article key={p.code} className="program-card">
+              <div key={p.code} className="program-row">
                 <span className="program-code">{p.code}</span>
-                <h3>{p.name}</h3>
-                <p>{p.desc}</p>
-              </article>
+                <div>
+                  <h3>{p.name}</h3>
+                  <p>{p.desc}</p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       <section className="section" id="admissions">
-        <div className="section-inner narrow">
-          <p className="eyebrow">Admissions</p>
-          <h2>How to Enroll</h2>
-          <ol className="steps">
-            <li>
-              <strong>Submit an application.</strong> Fill out the online
-              application form or visit the admissions office.
-            </li>
-            <li>
-              <strong>Submit requirements.</strong> Prepare your birth
-              certificate, report card / transcript, and two 2×2 ID photos.
-            </li>
-            <li>
-              <strong>Take the entrance assessment.</strong> A scheduling
-              notice will be sent to your registered email and phone number.
-            </li>
-            <li>
-              <strong>Complete enrollment.</strong> Once accepted, settle the
-              downpayment and claim your class schedule.
-            </li>
-          </ol>
+        <div className="container container-narrow">
+          <div className="section-head">
+            <p className="eyebrow">Admissions</p>
+            <h2>How to Enroll</h2>
+          </div>
+          <div className="steps">
+            {steps.map((s, i) => (
+              <div key={s.title} className="step">
+                <span className="step-num">{i + 1}</span>
+                <div>
+                  <h3>{s.title}</h3>
+                  <p>{s.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
           <p className="note">
-            For details, visit the <a href="https://esims.marsu-cics.com">ESIMS portal</a> or
-            contact the registrar's office.
+            For details, visit the{' '}
+            <a href="https://esims.marsu-cics.com">ESIMS portal</a> or contact
+            the registrar's office.
           </p>
         </div>
       </section>
 
       <section className="section section-alt" id="news">
-        <div className="section-inner">
-          <p className="eyebrow">Stay Updated</p>
-          <h2>News &amp; Events</h2>
-          <div className="news-grid">
+        <div className="container">
+          <div className="section-head">
+            <p className="eyebrow">Stay Updated</p>
+            <h2>News &amp; Events</h2>
+          </div>
+          <div className="news-list">
             {news.map((n) => (
-              <article key={n.title} className="news-card">
+              <article key={n.title} className="news-row">
                 <span className="news-tag">{n.tag}</span>
                 <time>{n.date}</time>
                 <h3>{n.title}</h3>
@@ -221,16 +241,16 @@ function App() {
       </section>
 
       <section className="section" id="apps">
-        <div className="section-inner">
-          <p className="eyebrow">Campus Systems</p>
-          <h2>Student &amp; Faculty Portals</h2>
-          <p className="section-sub">
-            Quick access to our campus applications.
-          </p>
-          <div className="apps-grid">
+        <div className="container container-narrow">
+          <div className="section-head">
+            <p className="eyebrow">Campus Systems</p>
+            <h2>Student &amp; Faculty Portals</h2>
+          </div>
+          <div className="apps-row">
             {quickLinks.map((a) => (
-              <a key={a.url} className="app-chip" href={a.url}>
+              <a key={a.url} className="app-link" href={a.url}>
                 {a.name}
+                <span aria-hidden="true">→</span>
               </a>
             ))}
           </div>
@@ -238,15 +258,18 @@ function App() {
       </section>
 
       <section className="section cta" id="contact">
-        <div className="section-inner narrow center">
-          <h2>Visit Us</h2>
+        <div className="container container-narrow center">
+          <div className="section-head">
+            <p className="eyebrow">Contact</p>
+            <h2>Visit Us</h2>
+          </div>
           <p>
             College of Information and Computing Sciences
             <br />
             Santa Cruz Campus, MARSU
           </p>
           <p className="muted">
-            Email: info@marsu-cics.com · Mon–Fri, 8:00 AM – 5:00 PM
+            info@marsu-cics.com · Mon–Fri, 8:00 AM – 5:00 PM
           </p>
           <a className="btn btn-primary" href="mailto:info@marsu-cics.com">
             Contact Us
@@ -255,10 +278,13 @@ function App() {
       </section>
 
       <footer className="footer">
-        <p>
-          © {new Date().getFullYear()} College of Information and Computing
-          Sciences — Santa Cruz Campus · marsu-cics.com
-        </p>
+        <div className="container footer-inner">
+          <span>
+            © {new Date().getFullYear()} College of Information and Computing
+            Sciences — Santa Cruz Campus
+          </span>
+          <span>marsu-cics.com</span>
+        </div>
       </footer>
     </div>
   )
